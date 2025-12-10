@@ -1,0 +1,13 @@
+# .gitignore
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.env
+
+# Dataset and Models
+data/
+models/
+
+# Secrets (VERY IMPORTANT)
+kaggle.json
