@@ -24,7 +24,14 @@ def run_training(args):
         print(f"❌ Error: Dataset not found at '{args.data}'.")
         print("Did you run 'python main.py --mode setup' first?")
         sys.exit(1)
-        
+
+    # --- NEW FIX: Create the directory for the saved model ---
+    save_dir = os.path.dirname(args.save)
+    if save_dir and not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+        print(f"📂 Created directory: {save_dir}")
+    # --------------------------------------------------------
+
     print(f"🏋️‍♀️ Starting Training for {args.epochs} epochs...")
     train(
         dataset_path=args.data,
