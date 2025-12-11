@@ -33,4 +33,5 @@ FaceAnalysis-System/
 │   ├── train.py           # Training loop with Weighted Loss
 │   └── inference.py       # Inference pipeline with TTA
 ├── requirements.txt       # Dependencies
+├── main.py       # CLI Entry point 
 └── README.md              # Documentation
