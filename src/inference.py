@@ -20,12 +20,12 @@ class UTKFacePipeline:
             try:
                 state_dict = torch.load(age_model_path, map_location=self.device)
                 self.age_model.load_state_dict(state_dict)
-                print("✅ Loaded EfficientNet age model.")
+                print("Loaded EfficientNet age model.")
             except RuntimeError:
-                print("❌ ERROR: Weight mismatch! You are trying to load ResNet weights into EfficientNet.")
-                print("👉 Please retrain the model before running inference.")
+                print("ERROR: Weight mismatch! You are trying to load ResNet weights into EfficientNet.")
+                print("Please retrain the model before running inference.")
         else:
-            print("⚠️ Warning: Age model weights not found!")
+            print("Warning: Age model weights not found!")
             
         self.age_model.to(self.device).eval()
 
