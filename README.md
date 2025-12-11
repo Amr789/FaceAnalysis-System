@@ -35,3 +35,10 @@ FaceAnalysis-System/
 ├── requirements.txt       # Dependencies
 ├── main.py       # CLI Entry point 
 └── README.md              # Documentation
+```
+
+## Installation
+
+### Prerequisites
+* Python 3.8+
+* GPU recommended (CUDA)
